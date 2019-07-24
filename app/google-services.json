@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "73720645207",
+    "firebase_url": "https://ptu-student-app-pro.firebaseio.com",
+    "project_id": "ptu-student-app-pro",
+    "storage_bucket": "ptu-student-app-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73720645207:android:c313b0216d35b354",
+        "android_client_info": {
+          "package_name": "com.rathoreapps.team.ptustudentapppro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73720645207-sng4e8eflmg5la8a0ll2ecat1dg96nkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rathoreapps.team.ptustudentapppro",
+            "certificate_hash": "e24e3d7dc968bdd2131f576609d594378167d8fa"
+          }
+        },
+        {
+          "client_id": "73720645207-hkqgu57sgud4i7a24uc6qr8ee011unsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx1nT9qqscjXhmKQexUvLvftC182oR0dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73720645207-hkqgu57sgud4i7a24uc6qr8ee011unsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73720645207:android:04b30c8a52732fb7",
+        "android_client_info": {
+          "package_name": "com.rathoreapps.team.syllabusuploder1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73720645207-jb26hakrbhntc17kdqgh94o61opjmip1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rathoreapps.team.syllabusuploder1",
+            "certificate_hash": "e24e3d7dc968bdd2131f576609d594378167d8fa"
+          }
+        },
+        {
+          "client_id": "73720645207-hkqgu57sgud4i7a24uc6qr8ee011unsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx1nT9qqscjXhmKQexUvLvftC182oR0dQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73720645207-hkqgu57sgud4i7a24uc6qr8ee011unsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
