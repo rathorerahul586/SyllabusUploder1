@@ -5,17 +5,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="5dp">
 
-    <AutoCompleteTextView
-        android:id="@+id/branchNameID"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Branch" />
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/branchNameID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Branch"
+            android:visibility="gone"/>
+        <EditText
+            android:id="@+id/no_of_semester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Number Of Semester"
+            android:visibility="gone"
+            android:maxLength="1"/>
+        <Button
+            android:id="@+id/add_branch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Branch"/>
+    </LinearLayout>
 
-    <Spinner
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="1dp"
+        android:background="#C9C7C7"
+        android:layout_marginTop="20dp"
+        android:layout_margin="5dp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Syllabus"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:background="#D3CFCF" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C9C7C7"
+        android:layout_marginTop="20dp"
+        android:layout_margin="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <Spinner
+            android:id="@+id/branch_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:id="@+id/branch_spinner_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <Spinner
+            android:id="@+id/semester_list_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:id="@+id/semester_list_spinner_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
 
     <AutoCompleteTextView
         android:id="@+id/subjectID"
