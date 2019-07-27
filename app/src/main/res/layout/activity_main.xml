@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <EditText
             android:id="@+id/branchNameID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Branch"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
         <EditText
             android:id="@+id/no_of_semester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:hint="Number Of Semester"
-            android:visibility="gone"
-            android:maxLength="1"/>
+            android:inputType="number"
+            android:maxLength="1"
+            android:visibility="gone" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/add_branch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add New Branch"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="Add New Branch" />
+
             <Button
                 android:id="@+id/hideBranch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hide"
-                android:onClick="setHideBranch"
                 android:layout_weight="1"
-                android:visibility="gone"/>
+                android:onClick="setHideBranch"
+                android:text="Hide"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
@@ -51,25 +55,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/branch_spinner_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:visibility="gone">
+
             <Spinner
                 android:id="@+id/branch_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:padding="5dp"/>
+                android:padding="5dp" />
+
             <ProgressBar
                 android:id="@+id/branch_spinner_progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="5dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -78,6 +85,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:visibility="gone">
+
             <Spinner
                 android:id="@+id/semester_list_spinner"
                 android:layout_width="match_parent"
@@ -85,37 +93,42 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
                 android:padding="5dp" />
+
             <ProgressBar
                 android:id="@+id/semester_list_spinner_progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="5dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
         </RelativeLayout>
+
         <AutoCompleteTextView
             android:id="@+id/subjectID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Subject"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/add_subject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add Subjects"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="Add Subjects" />
+
             <Button
                 android:id="@+id/hideSubject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hide"
                 android:layout_weight="1"
-                android:visibility="gone"
-                android:onClick="setHideSubject"/>
+                android:onClick="setHideSubject"
+                android:text="Hide"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
@@ -125,10 +138,10 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/syllabusLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/syllabusLayout"
             android:visibility="gone">
 
             <RelativeLayout
@@ -137,47 +150,50 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:visibility="gone">
+
                 <Spinner
                     android:id="@+id/subject_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_margin="5dp"
-                    android:padding="5dp"/>
+                    android:padding="5dp" />
+
                 <ProgressBar
                     android:id="@+id/subject_spinner_progressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:layout_marginEnd="5dp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/UnitLinear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_below="@id/subject_spinner">
+                    android:layout_below="@id/subject_spinner"
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/unitNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
                         android:hint="Unit No."
-                        android:maxLength="2"/>
+                        android:inputType="number"
+                        android:maxLength="2" />
+
                     <EditText
                         android:id="@+id/chapterID"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Chapter Name"/>
+                        android:hint="Chapter Name" />
                 </LinearLayout>
 
                 <EditText
                     android:id="@+id/contentID"
-                    android:layout_below="@id/UnitLinear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Content"/>
+                    android:layout_below="@id/UnitLinear"
+                    android:hint="Content" />
             </RelativeLayout>
 
         </LinearLayout>
@@ -191,17 +207,18 @@
                 android:id="@+id/add_syllabus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Add Syllabus"
-                android:textAlignment="center"
-                android:layout_weight="1"/>
+                android:textAlignment="center" />
+
             <Button
                 android:id="@+id/hideSyllabus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hide"
                 android:layout_weight="1"
-                android:visibility="gone"
-                android:onClick="setHideSyllabus"/>
+                android:onClick="setHideSyllabus"
+                android:text="Hide"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
