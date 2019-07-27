@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
     private DatabaseReference myRef;
     private FirebaseDatabase database;
+    private LinearLayout syllabusLayout;
     private AutoCompleteTextView subjectET;
-    private EditText branchNameET, noOfSemesterET, chapterNameET, contentET, unitNoET;
-    private Button addBranchBtn, addSubjectBtn, addSyllabusBtn, hideBranch, hideSubject, hideSyllabus;
-    private String branchName, noOfSemester, subjectName, chapterName, content, unitNo;
+    private String selectedBranch, selectedSemester;
     private Spinner branchListSpinner, semesterListSpinner, subjectListSpinner;
+    private EditText branchNameET, noOfSemesterET, chapterNameET, contentET, unitNoET;
+    private String branchName, noOfSemester, subjectName, chapterName, content, unitNo;
     private String[] branchListForSpinner, semesterListForSpinner, subjectListForSpinner;
     private ArrayAdapter<String> branchSpinnerAdapter, semesterListAdepter, subjectListAdapter;
-    private ProgressBar branchSpinnerProgressBar, semesterListSpinnerProgressBar, subjectListSpinnerProgressBar;
     private RelativeLayout branchSpinnerLayout, semesterListSpinnerLayout, subjectListSpinnerLayout;
-    private LinearLayout syllabusLayout;
-    private String selectedBranch, selectedSemester;
+    private Button addBranchBtn, addSubjectBtn, addSyllabusBtn, hideBranch, hideSubject, hideSyllabus;
+    private ProgressBar branchSpinnerProgressBar, semesterListSpinnerProgressBar, subjectListSpinnerProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
