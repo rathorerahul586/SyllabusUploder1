@@ -49,28 +49,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
         setAddBranch();
-        setAddSubjectBtn();
+        setAddSubject();
         setAddSyllabus();
     }
 
     private void initViews() {
         context = getBaseContext();
-        branchSpinnerLayout = findViewById(R.id.branch_spinner_layout);
-        semesterListSpinnerLayout = findViewById(R.id.semester_list_spinner_layout);
-        subjectListSpinnerLayout = findViewById(R.id.subject_spinner_layout);
-        syllabusLayout = findViewById(R.id.syllabusLayout);
-        branchNameET = findViewById(R.id.branchNameID);
-        subjectET = findViewById(R.id.subjectID);
-        chapterNameET = findViewById(R.id.chapterID);
-        contentET = findViewById(R.id.contentID);
         unitNoET = findViewById(R.id.unitNo);
-        addBranchBtn = findViewById(R.id.add_branch);
-        addSubjectBtn = findViewById(R.id.add_subject);
-        addSyllabusBtn = findViewById(R.id.add_syllabus);
+        subjectET = findViewById(R.id.subjectID);
+        contentET = findViewById(R.id.contentID);
         hideBranch = findViewById(R.id.hideBranch);
+        chapterNameET = findViewById(R.id.chapterID);
+        addBranchBtn = findViewById(R.id.add_branch);
         hideSubject = findViewById(R.id.hideSubject);
+        branchNameET = findViewById(R.id.branchNameID);
+        addSubjectBtn = findViewById(R.id.add_subject);
         hideSyllabus = findViewById(R.id.hideSyllabus);
+        addSyllabusBtn = findViewById(R.id.add_syllabus);
+        syllabusLayout = findViewById(R.id.syllabusLayout);
+        noOfSemesterET = findViewById(R.id.no_of_semester);
         branchListSpinner = findViewById(R.id.branch_spinner);
+        subjectListSpinner = findViewById(R.id.subject_spinner);
+        branchSpinnerLayout = findViewById(R.id.branch_spinner_layout);
+        semesterListSpinner = findViewById(R.id.semester_list_spinner);
+        subjectListSpinnerLayout = findViewById(R.id.subject_spinner_layout);
+        branchSpinnerProgressBar = findViewById(R.id.branch_spinner_progressBar);
+        semesterListSpinnerLayout = findViewById(R.id.semester_list_spinner_layout);
+        subjectListSpinnerProgressBar = findViewById(R.id.subject_spinner_progressBar);
+        semesterListSpinnerProgressBar = findViewById(R.id.semester_list_spinner_progressBar);
         branchListSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -83,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(context, "Please Select Any Branch Name form Dropdown Menu", Toast.LENGTH_SHORT).show();
             }
         });
-        semesterListSpinner = findViewById(R.id.semester_list_spinner);
         semesterListSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -96,11 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        subjectListSpinner = findViewById(R.id.subject_spinner);
-        branchSpinnerProgressBar = findViewById(R.id.branch_spinner_progressBar);
-        semesterListSpinnerProgressBar = findViewById(R.id.semester_list_spinner_progressBar);
-        subjectListSpinnerProgressBar = findViewById(R.id.subject_spinner_progressBar);
-        noOfSemesterET = findViewById(R.id.no_of_semester);
     }
 
     private void setAddBranch() {
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setAddSubjectBtn() {
+    private void setAddSubject() {
         addSubjectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
